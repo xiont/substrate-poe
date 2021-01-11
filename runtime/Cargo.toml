@@ -54,6 +54,13 @@ sp-std = { default-features = false, version = '2.0.0' }
 sp-transaction-pool = { default-features = false, version = '2.0.0' }
 sp-version = { default-features = false, version = '2.0.0' }
 
+
+#--snip--
+#pallet-nicks = { default-features = false, version = '2.0.0' }
+
+pallet-poe = { path = '../pallets/poe', default-features = false, version = '2.0.0' }
+
+
 [features]
 default = ['std']
 runtime-benchmarks = [
@@ -93,4 +100,8 @@ std = [
     'sp-std/std',
     'sp-transaction-pool/std',
     'sp-version/std',
+    #--snip--
+    #'pallet-nicks/std',
+    #--snip--
+    'pallet-poe/std',
 ]
